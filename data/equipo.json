@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "nombre": "Franco Wilberger"
+    },
+
+    {
+      "id": 2,
+      "nombre": "Santiago Vidal"
+    },
+
+    {
+        "id": 3,
+        "nombre": "Bautista Mazzante"
+    },
+
+    {
+        "id": 4,
+        "nombre": "Thiago Tapuerca"
+    },
+
+    {
+        "id": 5,
+        "nombre": "Tiago De Rosa Cajarabilla"
+    }
+]
