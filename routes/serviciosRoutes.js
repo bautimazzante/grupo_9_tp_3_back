@@ -1,4 +1,9 @@
-rutas.get('/', getServicios)
-rutas.get('/:id', getServiciosById)
+const { Router } = require('express');
+const { getServicios, getServicioById } = require('../controllers/ruta1Controller');
 
-module.exports = rutas
+const rutas = Router();
+
+rutas.get('/', getServicios);
+rutas.get('/:id', getServicioById);
+
+module.exports = rutas;

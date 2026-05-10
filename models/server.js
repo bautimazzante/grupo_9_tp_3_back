@@ -18,10 +18,13 @@ class Server {
     }
 
     routes() {
-        // Aca vamos a definir las rutas más adelante
-        this.app.get('/api', (req, res) => {
-            res.json({ msg: 'API funcionando correctamente' });
-        });
+    // Ruta de prueba que ya tenías
+    this.app.get('/api', (req, res) => {
+        res.json({ msg: 'API funcionando correctamente' });
+    });
+
+    // CONECTAR TUS RUTAS DE SERVICIOS AQUÍ:
+    this.app.use('/servicios', require('../routes/serviciosRoutes'));
     }
 
     listen() {
