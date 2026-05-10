@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "nombre": "Baño para mascotas",
+    "precio": 5000
+  },
+  {
+    "id": 2,
+    "nombre": "Peluquería canina",
+    "precio": 7000
+  },
+  {
+    "id": 3,
+    "nombre": "Consulta veterinaria",
+    "precio": 12000
+  }
+]

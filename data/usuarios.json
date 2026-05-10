@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "nombre": "Franco",
+    "mail": "franco@gmail.com",
+    "fechaRegistro": "2026-05-10",
+    "foto": "franco.png",
+    "ultimosPedidos": [
+      "Balanceado",
+      "Correa",
+      "Juguete"
+    ]
+  },
+  {
+    "id": 2,
+    "nombre": "Juan",
+    "mail": "juan@gmail.com",
+    "fechaRegistro": "2026-05-08",
+    "foto": "juan.png",
+    "ultimosPedidos": [
+      "Shampoo",
+      "Collar",
+      "Piedras sanitarias"
+    ]
+  }
+]
