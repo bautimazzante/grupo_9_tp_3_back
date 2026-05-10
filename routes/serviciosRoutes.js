@@ -1,9 +1,10 @@
-const { Router } = require('express');
-const { getServicios, getServicioById } = require('../controllers/ruta1Controller');
+const { Router } = require("express");
 
-const rutas = Router();
+const { obtenerServicios } = require("../controllers/serviciosController");
 
-rutas.get('/', getServicios);
-rutas.get('/:id', getServicioById);
+const router = Router();
 
-module.exports = rutas;
+router.get("/", obtenerServicios);
+
+module.exports = router;
+
