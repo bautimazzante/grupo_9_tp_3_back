@@ -1,0 +1,74 @@
+[
+{
+    "id": 1,
+    "nombre": "Bolsitas descartables",
+    "precio": 1500
+},
+{
+    "id": 2,
+    "nombre": "Cuchas",
+    "precio": 25000
+},
+{
+    "id": 3,
+    "nombre": "Portabolsitos",
+    "precio": 3000
+},
+{
+    "id": 4,
+    "nombre": "Shampoo",
+    "categoria": "Higiene",
+    "precio": 4500
+},
+{
+    "id": 5,
+    "nombre": "Rasqueta silicona",
+    "precio": 3500
+},
+{
+    "id": 6,
+    "nombre": "Correa",
+    "precio": 6000
+},
+{
+    "id": 7,
+    "nombre": "Collar",
+    "precio": 4000
+},
+{
+    "id": 8,
+    "nombre": "Hueso",
+    "precio": 2000
+},
+{
+    "id": 9,
+    "nombre": "Alfombra para lamer",
+    "precio": 5500
+},
+{
+    "id": 10,
+    "nombre": "Pelota sonido",
+    "precio": 3200
+},
+{
+    "id": 11,
+    "nombre": "Pelota sin sonido",
+    "precio": 2800
+},
+{
+    "id": 12,
+    "nombre": "Soga para gato",
+
+    "precio": 1500
+},
+{
+    "id": 13,
+    "nombre": "Comedero de acero",
+    "precio": 4800
+},
+{
+    "id": 14,
+    "nombre": "Transportador",
+    "precio": 35000
+}
+]
