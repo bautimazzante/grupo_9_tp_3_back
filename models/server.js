@@ -8,27 +8,25 @@ class Server {
         this.app = express();
         this.port = 3000;
 
-        // Middlewares
         this.middlewares();
 
-        // Rutas
         this.routes();
 
     }
 
     middlewares() {
 
-        // Permitir conexiones externas (frontend)
+        
         this.app.use(cors());
 
-        // Leer JSON
+        
         this.app.use(express.json());
 
     }
 
     routes() {
 
-        // Ruta de prueba
+        
         this.app.get('/api', (req, res) => {
 
             res.json({
@@ -37,8 +35,10 @@ class Server {
 
         });
 
-        // Ruta servicios
+    
         this.app.use('/servicios', require('../routes/serviciosRoutes'));
+
+        this.app.use('/equipo', require('../routes/equipoRoutes'));
 
     }
 

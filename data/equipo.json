@@ -1,26 +1,36 @@
 [
     {
         "id": 1,
-        "nombre": "Franco Wilberger"
+        "nombre": "Tiago De Rosa Cajarabilla",
+        "imagen": "../assets/img/Tiago.jpeg",
+        "descripcion": "Estudiante de Tecnicatura en programacion en la UTN."
     },
 
     {
-      "id": 2,
-      "nombre": "Santiago Vidal"
+        "id": 2,
+        "nombre": "Bautista Mazzante",
+        "imagen": "../assets/img/Bauti.jpeg",
+        "descripcion": "Estudiante de Programación en la UTN y de Cyberseguridad en la UP."
     },
 
     {
         "id": 3,
-        "nombre": "Bautista Mazzante"
+        "nombre": "Thiago Tapuerca",
+        "imagen": "../assets/img/Thiti.jpeg",
+        "descripcion": "Estudiante de ingeniería en sistemas de información en la UNS y tecnicatura en programacion en la UTN."
     },
 
     {
         "id": 4,
-        "nombre": "Thiago Tapuerca"
+        "nombre": "Santiago Vidal",
+        "imagen": "../assets/img/Vidal.jpeg",
+        "descripcion": "Estudiante de Programación en la UTN y de Marketing en el Juan XXIII."
     },
 
     {
         "id": 5,
-        "nombre": "Tiago De Rosa Cajarabilla"
+        "nombre": "Franco Wilberger",
+        "imagen": "../assets/img/Franco.jpeg",
+        "descripcion": "Estudiante de Tecnicatura en Programacion en la UTN."
     }
 ]
