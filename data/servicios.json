@@ -1,18 +1,18 @@
 [
 {
     "id": 1,
-    "nombre": "Bolsitas descartables",
-    "precio": 1500
+    "nombre": "Cepillo",
+    "precio": 4.490
 },
 {
     "id": 2,
-    "nombre": "Cuchas",
-    "precio": 25000
+    "nombre": "Plato",
+    "precio": 4.490
 },
 {
     "id": 3,
-    "nombre": "Portabolsitos",
-    "precio": 3000
+    "nombre": "Pelota Comedero",
+    "precio": 6.990
 },
 {
     "id": 4,
@@ -63,12 +63,17 @@
 },
 {
     "id": 13,
-    "nombre": "Comedero de acero",
-    "precio": 4800
+    "nombre": "Pelota de soga",
+    "precio": 2000
 },
 {
     "id": 14,
-    "nombre": "Transportador",
+    "nombre": "Cortauñas",
     "precio": 35000
+},
+{
+    "id": 15,
+    "nombre": "Mono de peluche gigante",
+    "precio": 14.990
 }
 ]
