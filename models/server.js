@@ -1,37 +1,57 @@
 const express = require('express');
+const cors = require('cors');
 
 class Server {
-    constructor() {
-        this.app = express();
-        this.port = 3000; //puerto 3000
 
-        // Middlewares (Funciones que añaden funciones extra al server)
+    constructor() {
+
+        this.app = express();
+        this.port = 3000;
+
+        // Middlewares
         this.middlewares();
 
-        // Rutas de mi aplicación
+        // Rutas
         this.routes();
+
     }
 
     middlewares() {
-        // Lectura y parseo del body (para recibir datos en JSON)
+
+        // Permitir conexiones externas (frontend)
+        this.app.use(cors());
+
+        // Leer JSON
         this.app.use(express.json());
+
     }
 
     routes() {
-    // Ruta de prueba que ya tenías
-    this.app.get('/api', (req, res) => {
-        res.json({ msg: 'API funcionando correctamente' });
-    });
 
-    // CONECTAR TUS RUTAS DE SERVICIOS AQUÍ:
-    this.app.use('/servicios', require('../routes/serviciosRoutes'));
+        // Ruta de prueba
+        this.app.get('/api', (req, res) => {
+
+            res.json({
+                msg: 'API funcionando correctamente'
+            });
+
+        });
+
+        // Ruta servicios
+        this.app.use('/servicios', require('../routes/serviciosRoutes'));
+
     }
 
     listen() {
+
         this.app.listen(this.port, () => {
+
             console.log(`Servidor corriendo en puerto ${this.port}`);
+
         });
+
     }
+
 }
 
 module.exports = Server;
