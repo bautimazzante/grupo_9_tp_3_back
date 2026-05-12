@@ -4,11 +4,11 @@
     "nombre": "Franco",
     "mail": "franco@gmail.com",
     "fechaRegistro": "2026-05-10",
-    "foto": "franco.png",
+    "foto": "Perfil1.jpeg",
     "ultimosPedidos": [
-      "Balanceado",
       "Correa",
-      "Juguete"
+      "Shampoo",
+      "Pelota sin sonido"
     ]
   },
   {
@@ -16,11 +16,11 @@
     "nombre": "Juan",
     "mail": "juan@gmail.com",
     "fechaRegistro": "2026-05-08",
-    "foto": "juan.png",
+    "foto": "Perfil2.jpeg",
     "ultimosPedidos": [
       "Shampoo",
-      "Collar",
-      "Piedras sanitarias"
+      "Comedor de acero",
+      "Soga para gato"
     ]
   }
 ]

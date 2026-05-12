@@ -40,6 +40,8 @@ class Server {
 
         this.app.use('/equipo', require('../routes/equipoRoutes'));
 
+        this.app.use('/perfil', require('../routes/perfilRoutes'));
+
     }
 
     listen() {
