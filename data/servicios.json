@@ -2,73 +2,86 @@
 {
     "id": 1,
     "nombre": "Bolsitas descartables",
+    "imagen": "../assets/img/descartables.png",
     "precio": 1500
 },
 {
     "id": 2,
     "nombre": "Cuchas",
+    "imagen": "../assets/img/cuchas.png",
     "precio": 25000
 },
 {
     "id": 3,
     "nombre": "Portabolsitos",
+    "imagen": "../assets/img/portabolsito.png",
     "precio": 3000
 },
 {
     "id": 4,
     "nombre": "Shampoo",
+    "imagen": "../assets/img/shampoo.png",
     "categoria": "Higiene",
     "precio": 4500
 },
 {
     "id": 5,
     "nombre": "Rasqueta silicona",
+    "imagen": "../assets/img/rasqueta.jpg",
     "precio": 3500
 },
 {
     "id": 6,
     "nombre": "Correa",
+    "imagen": "../assets/img/correa.png",
     "precio": 6000
 },
 {
     "id": 7,
     "nombre": "Collar",
+    "imagen": "../assets/img/collar.png",
     "precio": 4000
 },
 {
     "id": 8,
     "nombre": "Hueso",
+    "imagen": "../assets/img/hueso.png",
     "precio": 2000
 },
 {
     "id": 9,
     "nombre": "Alfombra para lamer",
+    "imagen": "../assets/img/alfombra.png",
     "precio": 5500
 },
 {
     "id": 10,
     "nombre": "Pelota sonido",
+    "imagen": "../assets/img/pelotasonido.png",
     "precio": 3200
 },
 {
     "id": 11,
     "nombre": "Pelota sin sonido",
+    "imagen": "../assets/img/pelotasinsonido.png",
     "precio": 2800
 },
 {
     "id": 12,
     "nombre": "Soga para gato",
-
+    "imagen": "../assets/img/sogagatos.jpg",
     "precio": 1500
 },
 {
     "id": 13,
     "nombre": "Comedero de acero",
+    "imagen": "../assets/img/comedero.png",
     "precio": 4800
 },
 {
     "id": 14,
     "nombre": "Transportador",
+    "imagen": "../assets/img/transportador.png",
     "precio": 35000
 }
 ]
