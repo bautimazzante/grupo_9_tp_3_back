@@ -43,7 +43,7 @@ serviciosRoutes.js: Utiliza el Router de Express para definir los endpoints espe
 
 **Archivos**
 
-app.js: Punto de entrada de la aplicación. Instancia la clase Server y ejecuta el método listen() para levantar la API.
+App.js: Punto de entrada de la aplicación. Instancia la clase Server y ejecuta el método listen() para levantar la API.
 
 package.json / package-lock.json: Gestionan las dependencias instaladas (Express, Cors) y la información del repositorio en GitHub.
 
