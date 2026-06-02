@@ -76,37 +76,13 @@ Los datos del sistema se almacenan localmente dentro de la carpeta data/. Cada a
 
 **Servicios JSON**
 [
-  {
-    "id": 4,
-    "nombre": "Shampoo",
-    "categoria": "Higiene",
-    "precio": 4500
-  }
+{
+"id": 4,
+"nombre": "Shampoo",
+"categoria": "Higiene",
+"precio": 4500
+}
 ]
 
-**Usuarios JSON**
-[
-  {
-    "id": 1,
-    "nombre": "Franco",
-    "mail": "franco@gmail.com",
-    "fechaRegistro": "2026-05-10",
-    "foto": "franco.png",
-    "ultimosPedidos": [
-      "Balanceado",
-      "Correa",
-      "Juguete"
-    ]
-  }
-]
-
-**Equipo JSON**
-
-[
-  {
-    "id": 5,
-    "nombre": "Tiago De Rosa Cajarabilla"
-  }
-]
 
 # grupo_9_tp_3_back
