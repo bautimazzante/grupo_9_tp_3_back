@@ -15,7 +15,7 @@ Programación III - Tecnicatura Universitaria en Programación
 **Division del trabajo**:
 - Mazzante Bautista:
 - Vidal Santiago:
-- De Rosa Tiago: Documentacion, ayuda en crear los servicios y Ayuda en general con todo lo que es JS
+- De Rosa Tiago: Documentacion, ayuda en crear los servicios y Ayuda en general con todo lo que es JS en los controlers.
 - Tapuerca Thiago:
 - Wilberger Franco: 
 
