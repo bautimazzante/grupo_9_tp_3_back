@@ -1,26 +1,45 @@
 const fs = require("fs").promises;
+const path = require("path");
 
-const obtenerPerfil = async (req, res) => {
+// Ruta absoluta y segura al JSON de usuarios
+const rutaUsuarios = path.join(__dirname, "../data/usuarios.json");
+
+// Obtener todos los usuarios
+const obtenerUsuarios = async (req, res, next) => {
+
+    console.log("GET /perfil ejecutado");
+
     try {
-        const id = parseInt(req.params.id);
-        const data = await fs.readFile("./data/usuarios.json", "utf-8");
+        const data = await fs.readFile(rutaUsuarios, "utf-8");
         const usuarios = JSON.parse(data);
-        
-        const usuario = usuarios.find(usuario => usuario.id === id);
+        res.json(usuarios);
+    } catch (error) {
+        next(error);
+    }
+};
+
+// Obtener un perfil/usuario por ID (Item 2.e de la rúbrica)
+const obtenerUsuarioById = async (req, res, next) => {
+    try {
+        const id = Number(req.params.id);
+        console.log(`GET /perfil/${id} ejecutado`);
+
+        const data = await fs.readFile(rutaUsuarios, "utf-8");
+        const usuarios = JSON.parse(data);
+      
+        const usuario = usuarios.find(u => u.id === id);
 
         if (!usuario) {
-            return res.status(404).json({
-                msg: "Usuario no encontrado"
-            });
+            return res.status(404).json({ message: "Usuario/Perfil no encontrado" });
         }
         
         res.json(usuario);
     } catch (error) {
-        console.log(error);
-        res.status(500).json({ msg: "Error interno del servidor" });
+        next(error);
     }
 };
 
 module.exports = {
-    obtenerPerfil
+    obtenerUsuarios,
+    obtenerUsuarioById
 };
