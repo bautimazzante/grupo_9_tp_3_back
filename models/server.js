@@ -3,9 +3,8 @@ const express = require('express');
 class Server {
     constructor() {
         this.app = express();
-        this.port = 3000; //puerto 3000
+        this.port = 3000; 
 
-        // Middlewares (funciones que añaden funciones extra al server)
         this.middlewares();
 
         // Rutas de mi aplicación
@@ -19,7 +18,6 @@ class Server {
     }
 
     routes() {
-    // Ruta de prueba 
     this.app.get('/api', (req, res) => {
         res.json({ msg: 'API funcionando correctamente' });
     });
@@ -28,7 +26,6 @@ class Server {
     this.app.use('/servicios', require('../routes/serviciosRoutes'));
     }
 
-    // manejo de errores
     errorHandler() {
         this.app.use((err, req, res, next) => {
             console.error("[Server Error]:", err.stack);

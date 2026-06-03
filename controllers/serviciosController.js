@@ -1,35 +1,35 @@
 const fs = require("fs").promises;
+const path = require("path");
 
-const obtenerServicios = async (req, res) => {
+const rutaServicios = path.join(__dirname, "../data/servicios.json");
+
+const obtenerServicios = async (req, res, next) => {
     try {
-        const data = await fs.readFile("./data/servicios.json", "utf-8");
+        const data = await fs.readFile(rutaServicios, "utf-8");
         const servicios = JSON.parse(data);
         res.json(servicios);
     } catch (error) {
-        console.log(error);
-        res.status(500).json({ msg: "Error interno del servidor" });
+        next(error); 
     }
 };
 
-const obtenerServicioById = async (req, res) => {
+const obtenerServicioById = async (req, res, next) => {
     try {
-        const data = await fs.readFile("./data/servicios.json", "utf-8");
+        const data = await fs.readFile(rutaServicios, "utf-8");
         const servicios = JSON.parse(data);
-        // Capturamos el id de los parámetros y lo pasamos a número
         const id = Number(req.params.id);
         const servicio = servicios.find(s => s.id === id);
 
         if (!servicio) {
-            return res.status(404).json({ msg: "Servicio no encontrado" });
+            return res.status(404).json({ message: "Servicio no encontrado" });
         }
+        
         res.json(servicio);
     } catch (error) {
-        console.log(error);
-        res.status(500).json({ msg: "Error interno del servidor" });
+        next(error); 
     }
 };
 
-// Exportamos ambas funciones
 module.exports = {
     obtenerServicios,
     obtenerServicioById
