@@ -2,7 +2,7 @@ const { Router } = require("express");
 const {
   obtenerUsuarios,
   obtenerUsuarioById,
-} = require("../controllers/perfilController");
+} = require("../controllers/perfilController.js");
 
 const router = Router();
 

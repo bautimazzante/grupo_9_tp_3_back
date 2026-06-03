@@ -31,7 +31,7 @@ class Server {
         });
 
         // Tus rutas de servicios
-        this.app.use('/servicios', require('../routes/serviciosRoutes'));
+        this.app.use('/servicios', require('../routes/serviciosRoutes.js'));
         
         // Puedes agregar aquí tus otras rutas (equipo, perfil, etc.)
         // this.app.use('/equipo', require('../routes/equipoRoutes'));

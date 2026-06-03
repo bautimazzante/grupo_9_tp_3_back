@@ -1,6 +1,6 @@
 const { Router } = require("express");
 
-const { obtenerServicios, obtenerServicioById } = require("../controllers/serviciosController");
+const { obtenerServicios, obtenerServicioById } = require("../controllers/serviciosController.js");
 
 const router = Router();
 
