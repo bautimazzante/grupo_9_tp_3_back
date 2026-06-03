@@ -1,26 +1,19 @@
 const express = require('express');
 const cors = require('cors');
+const path = require('path');
 
 class Server {
     constructor() {
         this.app = express();
-        // Render asigna un puerto dinámico, por eso usamos process.env.PORT
         this.port = process.env.PORT || 3000;
 
-        // Middlewares
         this.middlewares();
-
-        // Rutas
         this.routes();
-
-        // Manejo de errores
         this.errorHandler();
     }
 
     middlewares() {
-        // CORS es fundamental para que tu GitHub Pages pueda consultar esta API
         this.app.use(cors());
-        // Permite recibir y procesar datos JSON
         this.app.use(express.json());
     }
 
@@ -30,12 +23,11 @@ class Server {
             res.json({ msg: 'API funcionando correctamente' });
         });
 
-        // Tus rutas de servicios
-        this.app.use('/servicios', require('../routes/serviciosRoutes.js'));
-        
-        // Puedes agregar aquí tus otras rutas (equipo, perfil, etc.)
-        // this.app.use('/equipo', require('../routes/equipoRoutes'));
-        // this.app.use('/perfil', require('../routes/perfilRoutes'));
+        // Usamos path.join para mayor seguridad en la carga de rutas
+        this.app.use('/servicios', require(path.join(__dirname, '../routes/serviciosRoutes.js')));
+        // Agrega el resto de tus rutas aquí siguiendo el mismo patrón:
+        // this.app.use('/equipo', require(path.join(__dirname, '../routes/equipoRoutes.js')));
+        // this.app.use('/perfil', require(path.join(__dirname, '../routes/perfilRoutes.js')));
     }
 
     errorHandler() {
