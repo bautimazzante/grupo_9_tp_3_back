@@ -21,6 +21,7 @@ const obtenerUsuarios = async (req, res, next) => {
 // Obtener un perfil/usuario por ID (Item 2.e de la rúbrica)
 const obtenerUsuarioById = async (req, res, next) => {
     try {
+        
         const id = Number(req.params.id);
         console.log(`GET /perfil/${id} ejecutado`);
 

@@ -8,7 +8,7 @@ const rutaEquipo = path.join(__dirname, "../data/equipo.json");
 const obtenerEquipo = async (req, res, next) => {
 
     console.log("GET /equipo - petición recibida");
-
+    
     try {
         const data = await fs.readFile(rutaEquipo, "utf-8");
         const equipo = JSON.parse(data);
