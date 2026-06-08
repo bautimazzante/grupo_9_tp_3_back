@@ -18,7 +18,7 @@ Programación III - Tecnicatura Universitaria en Programación
 - Mazzante Bautista:
 - Vidal Santiago:
 - De Rosa Tiago: Documentacion, ayuda en crear los servicios y Ayuda en general con todo lo que es JS en los controlers.
-- Tapuerca Thiago:
+- Tapuerca Thiago: Soluciones a los errores de carga de imagen de la pagina de stock y despliegue en render
 - Wilberger Franco: 
 
 **Distribución de los archivos y carpetas**:
