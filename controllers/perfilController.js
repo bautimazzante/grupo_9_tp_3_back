@@ -6,6 +6,9 @@ const rutaUsuarios = path.join(__dirname, "../data/usuarios.json");
 
 // Obtener todos los usuarios
 const obtenerUsuarios = async (req, res, next) => {
+
+    console.log("GET /perfil ejecutado");
+
     try {
         const data = await fs.readFile(rutaUsuarios, "utf-8");
         const usuarios = JSON.parse(data);
@@ -18,9 +21,13 @@ const obtenerUsuarios = async (req, res, next) => {
 // Obtener un perfil/usuario por ID (Item 2.e de la rúbrica)
 const obtenerUsuarioById = async (req, res, next) => {
     try {
+        
+        const id = Number(req.params.id);
+        console.log(`GET /perfil/${id} ejecutado`);
+
         const data = await fs.readFile(rutaUsuarios, "utf-8");
         const usuarios = JSON.parse(data);
-        const id = Number(req.params.id);
+      
         const usuario = usuarios.find(u => u.id === id);
 
         if (!usuario) {

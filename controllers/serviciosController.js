@@ -5,6 +5,9 @@ const path = require("path");
 const rutaServicios = path.join(__dirname, "../data/servicios.json");
 
 const obtenerServicios = async (req, res, next) => {
+
+    console.log("GET /servicios ejecutado");
+
   try {
     const data = await fs.readFile(rutaServicios, "utf-8");
 
@@ -18,11 +21,14 @@ const obtenerServicios = async (req, res, next) => {
 
 const obtenerServicioById = async (req, res, next) => {
   try {
+    const id = Number(req.params.id);
+    console.log(`GET /servicios/${id} ejecutado`);
+
     const data = await fs.readFile(rutaServicios, "utf-8");
 
     const servicios = JSON.parse(data);
 
-    const id = Number(req.params.id);
+    
 
     const servicio = servicios.find((s) => s.id === id);
 
