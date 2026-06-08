@@ -1,3 +1,5 @@
+# grupo_9_tp_3_back
+
 Programación III - Tecnicatura Universitaria en Programación
 
 **Profesor**: Gustavo Ramoscelli.
@@ -25,21 +27,25 @@ Programación III - Tecnicatura Universitaria en Programación
 
 ruta1Controller.js: Contiene la lógica asíncrona de los endpoints. Acá se definen las funciones getServicios y getServicioById, encargadas de leer el archivo JSON mediante fs.promises, procesar la información y manejar las respuestas o errores (500/404).
 
-**data** 
+**data**
 
-equipo.json: Array con los nombres y IDs de los desarrolladores del proyecto.
+equipo.json: Array con los datos de los desarrolladores del proyecto (incluye ID, nombre, imagen y descripción).
 
-servicios.jso: Catálogo de los productos/servicios ofrecidos (incluye ID, nombre, precio y, en algunos casos, categoría).
+servicios.json: Catálogo de los productos/servicios ofrecidos (incluye ID, nombre, imagen y precio).
 
-usuarios.json: Datos de los perfiles registrados (nombre, correo, fecha de registro, foto y un array con sus últimos pedidos).
+usuarios.json: Datos de los perfiles registrados (incluye ID, nombre, mail, fecha de registro, foto y un array con sus últimos pedidos).
 
 ***models**
 
-server.js: Define la clase Server. Configura la inicialización de Express, setea el puerto de escucha (3000), aplica middlewares (express.json()) y conecta los paths principales con sus respectivos archivos de rutas.
+server.js: Define la clase Server. Configura la inicialización de Express, setea el puerto de escucha (dinámico o 3000), aplica middlewares (cors y express.json()), maneja errores y conecta los paths principales con sus respectivos archivos de rutas.
 
- **routes**
+**routes**
 
-serviciosRoutes.js: Utiliza el Router de Express para definir los endpoints específicos de la sección servicios, vinculándolos directamente con los controladores importados.
+equipoRoutes.js: Utiliza el Router de Express para definir el endpoint de la sección de equipo, vinculándolo directamente con su controlador importado.
+
+perfilRoutes.js: Emplea el Router para gestionar las rutas de los usuarios, conectando las peticiones (tanto el listado general como la búsqueda específica por ID) con sus funciones correspondientes en el controlador.
+
+serviciosRoutes.js: Configura los endpoints del catálogo de productos. Mediante el módulo de Express, asocia las rutas para obtener todos los servicios o el detalle de uno en particular con su controlador asignado.
 
 **Archivos**
 
@@ -55,19 +61,21 @@ El back-end está diseñado utilizando bloques async/await y try/catch para prev
 
 **Clase Server** (server.js):
 
-constructor: Inicializa la app de Express y define el puerto 3000. Llama automáticamente a los métodos de middlewares y rutas.
+constructor: Inicializa la app de Express y define el puerto de manera dinámica (usando variables de entorno o 3000 por defecto). Llama automáticamente a los métodos de middlewares, rutas y manejo de errores.
 
-middlewares: Habilita express.json() para que la API sea capaz de interpretar los cuerpos (bodies) de las peticiones entrantes en formato JSON.
+middlewares: Configura CORS para permitir peticiones desde el frontend y habilita express.json() para que la API sea capaz de interpretar los cuerpos (bodies) de las peticiones entrantes en formato JSON.
 
-routes: Conecta el path /servicios con las rutas definidas en serviciosRoutes.js. Incluye también una ruta de prueba /api.
+routes: Conecta el path /servicios con las rutas definidas en serviciosRoutes.js. Incluye también una ruta de prueba /api y está preparado para escalar con más rutas.
 
-listen: Pone a escuchar al servidor y emite un mensaje por consola (console.log) indicando el puerto activo, cumpliendo con la buena práctica de establecer flags.
+errorHandler: Middleware global que captura los errores de la aplicación y responde de forma segura con un estado HTTP (status) y un mensaje en formato JSON, evitando que el servidor se caiga.
 
-**Controladores de Servicios** (serviciosRoutes.js):
+listen: Pone a escuchar al servidor y emite un mensaje por consola (console.log) indicando el puerto activo, cumpliendo con la buena práctica de establecer flags..
 
-getServicios: Lee de manera asíncrona el archivo servicios.json. Lo parsea y retorna el array completo con un estado HTTP 200 (implícito en json()). Captura cualquier fallo en el bloque catch devolviendo un estado 500 y logueando el error.
+**Controladores de Servicios** (serviciosController.js):
 
-getServicioById: Similar al anterior, pero extrae el parámetro dinámico req.params.id. Utiliza el método .find() para buscar una coincidencia exacta iterando sobre los IDs (previamente convertidos a Number). Si el servicio no existe, interrumpe el flujo y retorna un error 404 ("Servicio no encontrado").
+obtenerServicios: Lee de manera asíncrona el archivo servicios.json. Lo parsea y retorna el array completo con un estado HTTP 200 (implícito en json()). Captura cualquier fallo en el bloque catch devolviendo un estado 500 y logueando el error.
+
+obtenerServicioById: Parecido al anterior, pero extrae el parámetro dinámico req.params.id. Utiliza el método .find() para buscar una coincidencia exacta iterando sobre los IDs (previamente convertidos a Number). Si el servicio no existe, interrumpe el flujo y retorna un error 404 ("Servicio no encontrado").
 
 **Estructura de Archivos JSON**: 
 Los datos del sistema se almacenan localmente dentro de la carpeta data/. Cada archivo contiene un array principal de objetos, simulando tablas de una base de datos para facilitar su consumo y persistencia desde la API.
@@ -84,4 +92,3 @@ Los datos del sistema se almacenan localmente dentro de la carpeta data/. Cada a
 }
 ]
 
-# grupo_9_tp_3_back
